@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:swhatsapp/Screens/signUp.dart';
 import '../Screens/homePage.dart';
 // ignore: camel_case_types
 class form extends StatefulWidget {
@@ -21,6 +22,12 @@ class _formState extends State<form> {
     if(isValidForm){
     Navigator.of(con).push(MaterialPageRoute(builder:(c)=>const homepage(),));
   }}
+
+void SignUp(BuildContext con){
+    
+    Navigator.of(con).push(MaterialPageRoute(builder:(c)=>const signup(),));
+  }
+
 
   void checkFalg(){
     setState(() {
@@ -54,15 +61,15 @@ class _formState extends State<form> {
                 border:const OutlineInputBorder(),
                 //labelText: 'Email',
                 hintText: "Enter >> (email@gmail.com) to go Home page",
-                prefixIcon:const Icon(Icons.person,color: Colors.black87),
-                suffixIcon: IconButton(onPressed: checkFalg ,icon: eye),
+                prefixIcon:const Icon(Icons.email,color: Colors.black87),
+                //suffixIcon: IconButton(onPressed: checkFalg ,icon: eye),
                 fillColor: Colors.white,
                 filled: true,
               ),
                 keyboardType: TextInputType.emailAddress,
                 obscureText: flag,
                 validator: (value){
-                  if(value!='email@gmail.com'){
+                  if(value!='Ieee@gmail.com'){
                       return "Enter true email";
                   }else{
                     return null;}
@@ -74,7 +81,7 @@ class _formState extends State<form> {
                 decoration: InputDecoration(
                 border: const OutlineInputBorder(),
                 //labelText: 'PassWord',
-                hintText: "Enter >> (123) to go Home page",
+                hintText: "Enter >> (12345) to go Home page",
                 prefixIcon: const IconButton(onPressed: null, icon: Icon(Icons.lock,color: Colors.black87),),
                 fillColor: Colors.white,
                 filled: true,
@@ -83,7 +90,7 @@ class _formState extends State<form> {
                 keyboardType: TextInputType.visiblePassword,
                 obscureText: flag,
                 validator: (value){
-                  if(value!='123'){
+                  if(value!.length <=5 ){
                       return "Enter true password";
                   }else{
                     return null;}
@@ -109,9 +116,18 @@ class _formState extends State<form> {
               ),
               ],),
               const SizedBox(height: 40),
-              Text(
-              "Don't have an account? Create",
-              style:  Theme.of(context).textTheme.headline6),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                      "Don't have an account? ",
+                      style:  Theme.of(context).textTheme.headline6),
+                  TextButton(
+                    onPressed:()=> SignUp(context),
+                    child:const Text('Create!'),)
+
+              ],)
+              
               /*navgetor*/
           ],)
       ),

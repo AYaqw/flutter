@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:swhatsapp/Screens/login.dart';
+//import 'package:swhatsapp/Screens/login.dart';
+import 'package:swhatsapp/Screens/homePage.dart';
 import 'Screens/login.dart';
 void main() {
   runApp(const MyApp());
@@ -15,8 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primaryColor:const Color(0xff25D366),
-        accentColor: const Color(0x0ffdf8c6),
-        fontFamily: 'Hubballi',
+        //fontFamily: 'Hubballi',
         textTheme: ThemeData.light().textTheme.copyWith(
           headline3: const TextStyle(
             color: Colors.white,
@@ -41,11 +41,11 @@ class MyApp extends StatelessWidget {
             fontFamily: 'Hubballi',
             fontWeight: FontWeight.bold,
           )
-        )
+        ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: const Color(0x0ffdf8c6))
         //primarySwatch: ,
       ),
       debugShowCheckedModeBanner: false,
-      home: const login(), // homepage(),
+      home:const login(), // homepage(),
     );
   }
 }

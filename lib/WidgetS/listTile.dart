@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:swhatsapp/WidgetS/content.dart';
+import 'package:swhatsapp/WidgetS/chats.dart';
 class listTile extends StatelessWidget {
   final String Title;
   final String Subtitle;

@@ -12,20 +12,23 @@ class drawer extends StatelessWidget {
         Container(
           color: Colors.green,
           child: UserAccountsDrawerHeader (
-            currentAccountPicture: Image.network("https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
-            accountEmail: const Text("Aya234@gmail.com"),
-            accountName:const Text("Aya Abd El moneim"),
+            currentAccountPicture: CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage(
+                    'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
+              ), 
+            accountEmail: const Text("A234@gmail.com"),
+            accountName:const Text("Aname "),
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),
             ), 
           ),),
           Column(
             children: const [
-              ListTile(leading:Icon(Icons.ac_unit),title: Text("Home"),),// navgertor when clink in any page
-              ListTile(leading:Icon(Icons.access_alarm_outlined),title: Text("about"),),
-              ListTile(leading:Icon(Icons.adb_outlined),title: Text("Home"),),
-              ListTile(leading:Icon(Icons.mood_bad_outlined),title: Text("Home"),),
-              ListTile(leading:Icon(Icons.mail_outline_rounded),title: Text("Home"),),
-              ListTile(leading:Icon(Icons.favorite_border_outlined),title: Text("Home"),),
+              ListTile(leading:Icon(Icons.camera_alt),title: Text("Camera"),),
+              ListTile(leading:Icon(Icons.message),title: Text("Chats"),),// navgertor when clink in any page
+              ListTile(leading:Icon(Icons.star),title: Text("Status"),),
+              ListTile(leading:Icon(Icons.call),title: Text("Calls"),),
+              ListTile(leading:Icon(Icons.settings),title: Text("Setting"),),
 
 
               //listTile("about", "", "", Colors.black)

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:swhatsapp/WidgetS/form_signup.dart';
 import '../WidgetS/form_login.dart';
 // ignore: camel_case_types
-class login extends StatelessWidget {
-  const login({Key? key}) : super(key: key);
+class signup extends StatelessWidget {
+  const signup({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class login extends StatelessWidget {
           height:2000,
           ),
         // form
-          const form(),
+          const formSign(),
       ],),
     );
   }
